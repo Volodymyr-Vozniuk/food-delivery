@@ -1,0 +1,157 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #2c2c2c;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h5,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.button-contact {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 30px;
+  min-width: 98px;
+  height: 32px;
+  background: #bbf330;
+  border: none;
+}
+
+/* header */
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu-list {
+  display: flex;
+  gap: 28px;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.header-nav {
+  margin-right: 30px;
+}
+
+.header-menu-link {
+  font-size: 14px;
+  color: #2c2c2c;
+  padding: 28px 0;
+  display: block;
+}
+
+.header-menu-link:hover,
+.header-menu-link:focus {
+}
+
+/* hero */
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 143px;
+}
+
+.hero {
+  padding-top: 14px;
+  padding-bottom: 69px;
+}
+
+.hero-text-wrap {
+  max-width: 511px;
+}
+.hero-title {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #2c2c2c;
+  margin-bottom: 28px;
+}
+.hero-text {
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/* about */
+
+.about-section {
+  background: #ffe550;
+}
+
+.about-container {
+  display: flex;
+  padding-top: 113px;
+  padding-bottom: 124px;
+  align-items: center;
+}
+.about-text-wrap {
+  margin-left: 90px;
+}
+.about-title {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 526px;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-bottom: 40px;
+  max-width: 500px;
+}
+
+.about-list {
+  display: flex;
+}
+.about-item {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+.about-subtitle {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.about-button {
+  background: #fff;
+  border: 2px solid #7eb101;
+}
