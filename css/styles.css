@@ -47,8 +47,11 @@ button {
   min-width: 98px;
   height: 32px;
   background: #bbf330;
-  border: none;
+  border: transparent;
   display: block;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* header */
@@ -76,6 +79,7 @@ button {
   color: #2c2c2c;
   padding: 28px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-nav-link:hover,
@@ -86,15 +90,23 @@ button {
 
 .header-hero-button:hover,
 .header-hero-button:focus {
-  background: #ffe450;
+  background-color: #ffe450;
 }
+
+/* hero */
 
 .hero-image {
   border-radius: 100%;
   border: 26px solid #ffe550;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* hero */
+.hero-image:hover,
+.hero-image:focus {
+  border: 26px solid #bbf330;
+  transform: scale(1.1);
+}
 
 .hero-container {
   display: flex;
@@ -133,9 +145,11 @@ button {
   padding-bottom: 124px;
   align-items: center;
 }
+
 .about-text-wrap {
   margin-left: 90px;
 }
+
 .about-title {
   font-size: 42px;
   line-height: 1.2;
@@ -154,12 +168,29 @@ button {
   display: flex;
   gap: 67px;
 }
+
 .about-item {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 32px;
   max-width: 253px;
 }
+
+.about-wraper-svg {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fefefe;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-svg {
+  fill: #7eb101;
+}
+
 .about-subtitle {
   font-size: 18px;
   line-height: 1.4;
@@ -176,12 +207,58 @@ button {
   line-height: 1.5;
   border-radius: 30px;
   display: block;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-button:hover,
 .about-button:focus {
   background: #bbf330;
   border: none;
+}
+
+.apple-warper-white {
+  background-color: #fefefe;
+  border-radius: 50%;
+  height: 502px;
+  width: 502px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 156px;
+  padding-right: 46px;
+  padding-left: 60px;
+}
+
+.apple-waraper-border {
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 990ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 990ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.apple-waraper-border:hover,
+.apple-waraper-border:focus {
+  transform: rotate(360deg);
+}
+
+.apple-warper-white {
+  transition: transform 990ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.apple-warper-white:hover,
+.apple-warper-white:focus {
+  transform: scale(1.08);
+}
+
+.about-image:hover,
+.about-image:focus {
 }
 
 /* delicious */
@@ -208,11 +285,20 @@ button {
   flex-wrap: wrap;
   gap: 32px;
 }
+
 .delicious-item {
   border: 16px solid #ffe550;
-  border-radius: 100%;
+  border-radius: 50%;
   padding: 24px;
   width: calc((100% - 2 * 32px) / 3);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.delicious-item:hover,
+.delicious-item:focus {
+  border: 16px solid #bbf330;
+  transform: scale(1.1);
 }
 
 /* reviews */
@@ -286,9 +372,6 @@ button {
   align-items: center;
 }
 
-.subscribe-wrap-text {
-}
-
 .subscribe-title {
   font-size: 42px;
   line-height: 1.2;
@@ -304,6 +387,7 @@ button {
 
 .subscribe-form {
   display: flex;
+  gap: 32px;
 }
 
 .subscribe-button {
@@ -314,8 +398,11 @@ button {
   min-width: 103px;
   height: 42px;
   background: #bbf330;
-  border: none;
+  border: transparent;
   display: block;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-button:hover,
@@ -326,10 +413,15 @@ button {
 .subscribe-input {
   border: 0.85px solid #ffe550;
   border-radius: 30px;
-  padding: 10px;
+  padding: 0 12px;
   width: 395px;
   height: 42px;
-  margin-right: 32px;
+  outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-input:focus {
+  border: 0.85px solid #7eb101;
 }
 
 /* footer */
@@ -338,11 +430,14 @@ button {
   padding-top: 100px;
   padding-bottom: 100px;
   box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+  background-image: url(../images/fruit-footer.png);
+  background-position: bottom;
+  box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+  background-repeat: no-repeat;
 }
 
 .footer-warp {
   display: flex;
-  align-items: center;
 }
 
 .logo-footer {
@@ -355,6 +450,11 @@ button {
   gap: 28px;
 }
 
+.footer-form {
+  display: flex;
+  gap: 13px;
+}
+
 .footer-subscribe {
   margin-left: auto;
 }
@@ -364,9 +464,16 @@ button {
   color: #2c2c2c;
   padding: 28px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-title {
+.footer-item-link:hover,
+.footer-item-link:focus {
+  color: #bbf330;
+  text-decoration: underline;
+}
+
+.footer-subscribe {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
@@ -376,14 +483,18 @@ button {
 .footer-input {
   border: 0.85px solid #ffe550;
   border-radius: 30px;
-  padding: 10px;
   width: 279px;
-  margin-right: 13px;
+  height: 42px;
+  outline: transparent;
   margin-bottom: 12px;
+  padding: 0 12px;
 }
 
-.footer-form {
+.footer-input:focus {
+  border: 0.85px solid #7eb101;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .footer-privacy {
   font-size: 12px;
 }
@@ -394,12 +505,20 @@ button {
   color: #7eb101;
 }
 
+.footer-privacy-link::before {
+  content: " ";
+}
+
 .footer-button {
   border: 0.85px solid #7eb101;
   border-radius: 30px;
   min-width: 103px;
   height: 42px;
   background: #fff;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-button:hover,
@@ -414,8 +533,7 @@ button {
   display: flex;
   gap: 20px;
 }
-.footer-menu-item {
-}
+
 .footer-menu-link {
   font-size: 12px;
   text-decoration: underline;
@@ -431,4 +549,116 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-top: 80px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(94, 99, 99, 0.7);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  border-radius: 30px;
+  width: 458px;
+  min-height: 449px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+  background-color: #ffe550;
+  padding: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  border: none;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-close-svg {
+  fill: #2c2c2c;
+}
+
+.modal-field {
+  margin-bottom: 24px;
+}
+
+.modal-label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 2px;
+  margin-left: 12px;
+}
+
+.modal-inpput {
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  border-radius: 30px;
+  width: 100%;
+  height: 48px;
+  padding: 0 12px;
+  outline: transparent;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+
+.modal-inpput::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.modal-send-btm {
+  border: 2px solid #7eb101;
+  border-radius: 30px;
+  padding: 10px 20px;
+  min-width: 106px;
+  height: 40px;
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-send-btm:hover,
+.modal-send-btm:focus {
+  background-color: #bbf330;
+}
+
+.modal-field-last {
+  margin-bottom: 32px;
 }
