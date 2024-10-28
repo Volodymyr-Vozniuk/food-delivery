@@ -359,6 +359,16 @@ button {
   align-items: center;
 }
 
+.reviews-star-wraper {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 28px;
+}
+
+.reviews-star-svg {
+  fill: #ffe550;
+}
+
 /* subscribe */
 
 .subscribe-section {
