@@ -59,47 +59,6 @@
   background-repeat: no-repeat;
 }
 
-.logo-footer {
-  margin-left: 5px;
-}
-
-.footer-list {
-  margin-left: 143px;
-}
-
-.footer-form {
-  gap: 13px;
-}
-
-.footer-subscribe {
-  margin-left: auto;
-}
-
-.footer-item-link {
-  color: #2c2c2c;
-  padding: 28px 0;
-  display: block;
-}
-
-.footer-button {
-  height: 42px;
-}
-
-.footer-menu-list {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-menu-link {
-  font-size: 12px;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #7eb101;
-}
-.footer-text-reserved {
-  font-size: 12px;
-}
-
 .footer-menu-wrap {
   display: flex;
   justify-content: space-between;
