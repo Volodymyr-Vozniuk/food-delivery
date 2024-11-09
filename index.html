@@ -18,15 +18,14 @@
   </head>
 
   <body>
-    <neader>
+    <neader class="header-section">
       <div class="container header-container">
-        <a class="logo" href=""
-          ><img
-            src="./images/Logo.svg"
-            alt="logo-company"
-            width="66"
-            height="52"
-        /></a>
+        <a class="logo" href="">
+          <svg class="header-logo-svg" width="66" height="52">
+            <use href="./images/icon.svg#icon-logo-food"></use>
+          </svg>
+        </a>
+
         <nav class="header-nav">
           <ul class="header-nav-list">
             <li><a class="header-nav-link" href="">Home</a></li>
@@ -39,6 +38,13 @@
         <button class="header-hero-button" type="button" data-modal-open>
           Order Now
         </button>
+        <div class="header-mob-menu">
+          <button type="menu" class="header-menu-mob-btn">
+            <svg class="header-menu-svg" width="28" height="28">
+              <use href="./images/icon.svg#icon-icons-solid_menu"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </neader>
 
@@ -53,30 +59,54 @@
               enjoy a hassle-free and delicious meal from the comfort of your
               own home.
             </p>
-            <button class="header-hero-button" type="button">Order Now</button>
+            <button class="header-hero-button hero-mob-btn" type="button">
+              Order Now
+            </button>
           </div>
-          <img
-            class="hero-image"
-            src="./images/hero.png"
-            alt="salad"
-            width="528"
-            height="528"
-          />
+          <div class="hero-img-wrapper">
+            <img
+              class="hero-img"
+              srcset="./images/hero1x.png 1x, ./images/hero@2x.png 2x"
+              src="./images/hero1x.png"
+              alt="a plate food"
+              width="528"
+            />
+          </div>
         </div>
       </section>
 
       <section class="about-section">
         <div class="container about-container">
           <div class="apple-waraper-border">
-            <div class="apple-warper-white">
+            <picture>
+              <source
+                srcset="
+                  ./images/about-apple-desktop1x.png  1x,
+                  ./images/about-apple-desktop@2x.png 2x
+                "
+                media="(min-width:1280px)"
+              />
+              <source
+                srcset="
+                  ./images/about-apple-tab1x.png  1x,
+                  ./images/about-apple-tab@2x.png 2x
+                "
+                media="(min-width:768px)"
+              />
+              <source
+                srcset="
+                  ./images/about-apple-mob1x.png  1x,
+                  ./images/about-apple-mob@2x.png 2x
+                "
+                media="(max-width: 767px)"
+              />
               <img
                 class="about-image"
-                src="./images/apple.png"
+                src="./images/about-apple-desktop1x.png"
                 alt="green-apple"
-                width="396"
-                height="502"
+                width="550"
               />
-            </div>
+            </picture>
           </div>
 
           <div class="about-text-wrap">
@@ -114,7 +144,10 @@
               </li>
             </ul>
 
-            <button class="about-button" type="button">Order Now</button>
+            <div class="about-btn-read-mob">
+              <button class="about-button" type="button">Order Now</button>
+              <a class="about-read" href="">Read More</a>
+            </div>
           </div>
         </div>
       </section>
@@ -125,52 +158,171 @@
           <p class="delicious-text">Looking for something delicious?</p>
           <ul class="delicious-list">
             <li class="delicious-item">
-              <img
-                src="./images/gamburger-min.png"
-                alt="gamburger-photo"
-                width="315"
-                height="315"
-              />
+              <picture class="delicious-picture">
+                <source
+                  srcset="
+                    ./images/gamburger-desk1x.png  1x,
+                    ./images/gamburger-desk@2x.png 2x
+                  "
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcset="
+                    ./images/gamburger-tab1x.png  1x,
+                    ./images/gamburger-tab@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gamburger-mob1x.png  1x,
+                    ./images/gamburger-mob@2x.png 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/gamburger-desk1x.png"
+                  alt="gamburger-photo"
+                  width="315"
+                />
+              </picture>
             </li>
+
             <li class="delicious-item">
-              <img
-                src="./images/pasta-min.png"
-                alt="a plate of pasta "
-                width="315"
-                height="315"
-              />
+              <picture class="delicious-picture">
+                <source
+                  srcset="
+                    ./images/pasta-desk1x.png  1x,
+                    ./images/pasta-desk@2x.png 2x
+                  "
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcset="
+                    ./images/pasta-tab1x.png  1x,
+                    ./images/pasta-tab@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/pasta-mob1x.png  1x,
+                    ./images/pasta-mob@2x.png 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/pasta-desk1x.png"
+                  alt=" plate of pasta"
+                  width="315"
+                />
+              </picture>
             </li>
+
             <li class="delicious-item">
-              <img
-                src="./images/pizza-min.png"
-                alt="pizza-photo"
-                width="315"
-                height="315"
-              />
+              <picture class="delicious-picture">
+                <source
+                  srcset="
+                    ./images/pizza-desk1x.png  1x,
+                    ./images/pizza-desk@2x.png 2x
+                  "
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcset="
+                    ./images/pizza-tab1x.png  1x,
+                    ./images/pizza-tab@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/pizza-mob1x.png  1x,
+                    ./images/pizza-mob@2x.png 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/pizza-desk1x.png"
+                  alt="pizza-photo"
+                  width="315"
+                />
+              </picture>
             </li>
-            <li class="delicious-item">
-              <img
-                src="./images/chicken-min.png"
-                alt="a plate of chicken and rice"
-                width="315"
-                height="315"
-              />
+
+            <li class="delicious-item delicious-item-tab-desk">
+              <picture class="delicious-picture">
+                <source
+                  srcset="
+                    ./images/chicken-desk1x.png  1x,
+                    ./images/chicken-desk@2x.png 2x
+                  "
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcset="
+                    ./images/chicken-tab1x.png  1x,
+                    ./images/chicken-tab@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source srcset="" media="(max-width:767px)" />
+                <img
+                  src="./images/chicken-desk1x.png"
+                  alt="a plate of chicken and rice"
+                  width="315"
+                />
+              </picture>
             </li>
-            <li class="delicious-item">
-              <img
-                src="./images/salat-min.png"
-                alt="a plate of salad with salmon"
-                width="315"
-                height="315"
-              />
+
+            <li class="delicious-item delicious-item-tab-desk">
+              <picture class="delicious-picture">
+                <source
+                  srcset="
+                    ./images/salat-desk1x.png  1x,
+                    ./images/salat-desk@2x.png 2x
+                  "
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcset="
+                    ./images/salat-tab1x.png,
+                    ./images/salat-tab@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source srcset="" media="(max-width:767px)" />
+                <img
+                  src="./images/salat-desk1x.png"
+                  alt="a plate of salad with salmon"
+                  width="315"
+                />
+              </picture>
             </li>
-            <li class="delicious-item">
-              <img
-                src="./images/borshch-min.png"
-                alt="a plate of borshch"
-                width="315"
-                height="315"
-              />
+
+            <li class="delicious-item delicious-item-tab-desk">
+              <picture class="delicious-picture">
+                <source
+                  srcset="
+                    ./images/borshch-desk1x.png  1x,
+                    ./images/borshch-desk@2x.png 2x
+                  "
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcset="
+                    ./images/borshch-tab1x.png   1x,
+                    ./images/borshch-desk@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source srcset="" media="(max-width:767px)" />
+                <img
+                  src="./images/borshch-desk1x.png"
+                  alt="a plate of borshch"
+                  width="315"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -264,6 +416,29 @@
 
       <section class="subscribe-section">
         <div class="container subscribe-container">
+          <picture class="subscribe-picture">
+            <source
+              srcset="
+                ./images/banan-desk1x.png  1x,
+                ./images/banan-desk@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="./images/banan-tab1x.png 1x, ./images/banan-tab@2x.png 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./images/banan-mob1x.png 1x, ./images/banan-mob@2x.png 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="subscribe-picture"
+              src="./images/banan-desk1x.png"
+              alt="one banan"
+              width="608"
+            />
+          </picture>
           <div class="subscribe-wrap-text">
             <h2 class="subscribe-title">Subscribe To Get Special Offers</h2>
             <p class="subscribe-text">
@@ -283,12 +458,6 @@
               <button class="subscribe-button" type="button">Subscribe</button>
             </form>
           </div>
-          <img
-            src="./images/banan.png"
-            alt="one banan"
-            width="608"
-            height="266"
-          />
         </div>
       </section>
     </main>
@@ -296,20 +465,21 @@
     <footer class="footer-section">
       <div class="container footer-container">
         <div class="footer-warp">
-          <a class="logo-footer" href=""
-            ><img
-              src="./images/Logo.svg"
-              alt="logo-company"
-              width="66"
-              height="52"
-          /></a>
-          <ul class="footer-list">
-            <li><a class="footer-item-link" href="">Home</a></li>
-            <li><a class="footer-item-link" href="">About</a></li>
-            <li><a class="footer-item-link" href="">Service</a></li>
-            <li><a class="footer-item-link" href="">Menu</a></li>
-            <li><a class="footer-item-link" href="">Contact</a></li>
-          </ul>
+          <div class="footer-wraper-logo-list">
+            <a class="logo-footer" href="">
+              <svg width="66" height="52">
+                <use href="./images/icon.svg#icon-logo-food"></use>
+              </svg>
+            </a>
+
+            <ul class="footer-list">
+              <li><a class="footer-item-link" href="">Home</a></li>
+              <li><a class="footer-item-link" href="">About</a></li>
+              <li><a class="footer-item-link" href="">Service</a></li>
+              <li><a class="footer-item-link" href="">Menu</a></li>
+              <li><a class="footer-item-link" href="">Contact</a></li>
+            </ul>
+          </div>
 
           <div class="footer-subscribe">
             <p class="footer-subscribe">Subscribe</p>
@@ -346,7 +516,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-svg" width="12" height="12">
@@ -385,10 +555,10 @@
               name="user-email"
             />
           </div>
-          <button type="submit" class="modal-send-btm">Send</button>
+          <button type="submit" class="modal-send-btn">Send</button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
   </body>
 </html>
