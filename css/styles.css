@@ -320,13 +320,9 @@ button {
     top: 89px;
   }
 
-  @keyframes hero-img-wrapper {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100px);
-    }
+  .hero-img-wrapper:hover,
+  .hero-img-wrapper:focus {
+    border: 14px solid #bbf330;
   }
 
   .hero-img {
@@ -348,6 +344,7 @@ button {
   .hero-img-wrapper {
     position: relative;
     width: 580px;
+    height: 580px;
     border: 26px solid #ffe550;
     top: 0;
     right: 0;
@@ -375,6 +372,8 @@ button {
     width: 528px;
   }
 }
+
+/* -------------slider----------------- */
 
 /* -------------------about--------------------- */
 

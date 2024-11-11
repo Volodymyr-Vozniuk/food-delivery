@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <neader class="header-section">
+    <header class="header-section">
       <div class="container header-container">
         <a class="logo" href="">
           <svg class="header-logo-svg" width="66" height="52">
@@ -39,7 +39,7 @@
           Order Now
         </button>
         <div class="header-mob-menu">
-          <button type="menu" class="header-menu-mob-btn" data-mobile-open>
+          <button type="button" class="header-menu-mob-btn" data-mobile-open>
             <svg class="header-menu-svg" width="28" height="28">
               <use href="./images/icon.svg#icon-icons-solid_menu"></use>
             </svg>
@@ -72,7 +72,7 @@
           </ul>
         </nav>
       </div>
-    </neader>
+    </header>
 
     <main>
       <section class="hero">
@@ -90,7 +90,7 @@
             </button>
           </div>
           <div class="hero-img-wrapper">
-            <picrure>
+            <picture>
               <source
                 srcset="
                   ./images/hero/hero1x.png  1x,
@@ -100,8 +100,8 @@
               />
               <source
                 srcset="
-                  ./images/hero/hero-salad-tab1x.png  1x,
-                  ./images/hero/hero-salad-tab@2x.png 2x
+                  ./images/hero/hero-photo-tab1x.png  1x,
+                  ./images/hero/hero-photo-tab@2x.png 2x
                 "
                 media="(min-width: 768px)"
               />
@@ -111,7 +111,7 @@
                 alt="a plate food"
                 width="528"
               />
-            </picrure>
+            </picture>
           </div>
         </div>
       </section>
@@ -283,7 +283,6 @@
                   "
                   media="(max-width:767px)"
                 />
-                delicious-section/
                 <img
                   src="./images/delicious-section/pizza-desk1x.png"
                   alt="pizza-photo"
@@ -308,7 +307,6 @@
                   "
                   media="(min-width: 768px)"
                 />
-                <source srcset="" media="(max-width:767px)" />
                 <img
                   src="./images/delicious-section/chicken-desk1x.png"
                   alt="a plate of chicken and rice"
@@ -326,10 +324,14 @@
                   "
                   media="(min-width: 1280px)"
                 />
-                <source srcset=" ./images/delicious-section/salat-tab1x.png,
-                ./images/delicious-section/salat-tab@2x.png 2x "
-                delicious-section/ media="(min-width: 768px)" />
-                <source srcset="" media="(max-width:767px)" />
+                <source
+                  srcset="
+                    ./images/delicious-section/salat-tab1x.png,
+                    ./images/delicious-section/salat-tab@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
                 <img
                   src="./images/delicious-section/salat-desk1x.png"
                   alt="a plate of salad with salmon"
@@ -354,7 +356,7 @@
                   "
                   media="(min-width: 768px)"
                 />
-                <source srcset="" media="(max-width:767px)" />
+
                 <img
                   src="./images/delicious-section/borshch-desk1x.png"
                   alt="a plate of borshch"
@@ -595,7 +597,7 @@
               type="email"
               class="modal-inpput"
               placeholder="example@gmail.com"
-              id="user-email"
+              id="user-mail"
               name="user-email"
             />
           </div>
